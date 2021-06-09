@@ -1,0 +1,8 @@
+.customers {
+  height: 1900px;
+}
+
+.customers__title {
+  padding: 800px 0;
+  line-height: 1200px;
+}
