@@ -24,9 +24,10 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  margin: 40px auto; 
   transform: translateY(0);
   transition: transform 0.6s ease;
+  margin: 0;
+  padding: 40px 60px;
 }
 
 .header__navbar-contents_reverse {
@@ -40,11 +41,12 @@
   color: #000;
   justify-content: space-between;
   align-items: center;
-  margin: 40px auto; 
   transform: translateY(10);
   transition: transform 0.6s ease;
   animation: navAnimation 3s;
   z-index: 2;
+  margin: 0;
+  padding: 40px 60px;
 }
 
 @keyframes navAnimation {
@@ -111,6 +113,7 @@
   line-height: 24px;
   font-weight: 700;
   letter-spacing: -1%;
+  padding-left: 40px;
 }
 
 .header__title {

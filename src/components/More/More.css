@@ -1,0 +1,28 @@
+.more {
+  padding: 100px 60px;
+  border-bottom: 1px solid #000;
+}
+
+.more__title {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 58px;
+  letter-spacing: -1%;
+  color: #000;
+  margin: 0;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+}
+
+.more__text-accent {
+  color: #683d83;
+}
+
+.more__list-wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 60px;
+  list-style-type: none;
+  padding: 0;
+}

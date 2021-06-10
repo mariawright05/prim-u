@@ -1,6 +1,10 @@
 @import url('../../vendor/normalize.css');
 @import url('../../vendor/fonts/fonts.css');
 
+:root {
+  scroll-behavior: smooth;
+}
+
 .app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -12,4 +16,7 @@
   font-family: 'Roboto', 'Helvetica', sans-serif;
   color: #000;
   min-width: 375px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

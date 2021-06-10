@@ -10,7 +10,8 @@ const Customers = () => (
           <div className="customers__text-container">
             <p className="customers__text">Enjoy beauty treatments wherever U are</p>
             <p className="customers__text">Struggling to find the time to pamper yourself? 
-With just one click, Prim-U will connect U to the right primlancer, at the right time, right in the comfort of your home. 
+With just one click, Prim-U will connect U to the right primlancer,
+at the right time, right in the comfort of your home.
 On holiday? Book an expert primlancer closest to U. 
 Simply click, pick a treatment and we’ll come to U.</p>
           </div>
