@@ -1,5 +1,5 @@
 .header {
-  background: url('../../images/header-image.png') no-repeat;
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom right;
   display: flex;
@@ -78,7 +78,7 @@
 }
 
 .header__logo-container:hover {
-  color: #683D83;
+  color: #683d83;
 }
 
 .header__logo {
