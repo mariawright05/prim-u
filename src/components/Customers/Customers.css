@@ -4,7 +4,8 @@
 
 .customers__image-container {
   border-radius: 20px;
-  background: linear-gradient(0deg,rgba(0,0,0,.5), rgba(0,0,0,.5)), url('../../images/customers-image.png') no-repeat center;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+    no-repeat center;
   height: 763px;
   max-width: 1320px;
   background-size: cover;
