@@ -1,10 +1,27 @@
 import React from 'react';
+import { useQuery } from '@apollo/client';
+import gql from 'graphql-tag';
 import { v4 as uuidv4 } from 'uuid';
-import EventCard from '../EventCard/EventCard';
-import './More.css';
+import GroupCard from '../GroupCard/GroupCard';
+import './Group.css';
 
-const More = () => {
-  const tempEvents = [
+const GROUP_QUERY = gql`
+  {
+    forGroups {
+      groupService
+      groupServiceDescription
+      groupServiceImage {
+        url
+      }
+      groupButtonText
+      groupButtonLink
+    }
+  }
+`;
+
+const Group = () => {
+  const { loading, error, data } = useQuery(GROUP_QUERY);
+  /* const tempEvents = [
     {
       imageURL: (''),
       title: 'Weddings',
@@ -20,19 +37,22 @@ const More = () => {
       title: 'Corporate Events',
       description: 'Presentation is everything. First impressions last. Get connected to Professionals that can partner with you to get your team ready at that crucial time where it really matters the most. The first step would be to download the Prim-U App.'
     }
-  ]
+  ] */
 
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error :(</p>;
   return (
-    <section className="more">
-      <h1 className="more__title">For <span className="more__text-accent">More</span> Than Just U</h1>
-      <ul className="more__list-wrapper">
-        {tempEvents.map((event => <EventCard
-          key={uuidv4()}
-          event={event} />)
-        )}
+    <section className="group">
+      <h1 className="group__title">
+        For <span className="group__text-accent">More</span> Than Just U
+      </h1>
+      <ul className="group__list-wrapper">
+        {data.forGroups.map((event) => (
+          <GroupCard key={uuidv4()} event={event} />
+        ))}
       </ul>
     </section>
-  )
-}
+  );
+};
 
-export default More;
+export default Group;

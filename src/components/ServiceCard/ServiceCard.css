@@ -2,13 +2,18 @@
   width: 400px;
   height: 400px;
   border-radius: 20px;
-  border: 1px solid #f4f4f4;
-  background-color: rgba(0, 0, 0, .5);
   position: relative;
+  background-color: rgba(0, 0, 0, 1);
 }
 
 .serviceCard__image {
   width: 100%;
+}
+
+.serviceCard__image:before {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 3000px rgba(204, 0, 255, 0.4) inset;
 }
 
 .serviceCard__text {

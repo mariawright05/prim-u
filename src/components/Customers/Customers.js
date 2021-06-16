@@ -44,8 +44,12 @@ const Customers = () => {
                 {data.forCustomers[0].description_text.text}
               </p>
             </div>
-            <button type="button" className="customers__button">
-              Make a Booking
+            <button
+              type="button"
+              className="customers__button"
+              onClick={() => window.open(data.forCustomers[0].button_url)}
+            >
+              {data.forCustomers[0].button_text}
             </button>
           </div>
         </div>
