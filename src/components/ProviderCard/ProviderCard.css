@@ -1,0 +1,30 @@
+.providerCard {
+  width: 630px;
+}
+
+.providerCard__image-wrapper {
+  width: 630px;
+  height: 460px;
+  border-radius: 20px;
+  border: 1px solid #f4f4f4;
+  background-color: rgba(0, 0, 0, .5);
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.providerCard__image {
+  width: 100%;
+}
+
+.providerCard__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 38px;
+  line-height: 44px;
+  text-transform: uppercase;
+  letter-spacing: -1%;
+  color: #fff;
+}

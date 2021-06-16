@@ -3,6 +3,7 @@ import Header from '../Header/Header';
 import Customers from '../Customers/Customers';
 import TreatYourself from '../TreatYourself/TreatYourself';
 import More from '../More/More';
+import Services from '../Services/Services';
 import './App.css';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Customers />
       <TreatYourself />
       <More />
+      <Services />
     </div>
   );
 }
