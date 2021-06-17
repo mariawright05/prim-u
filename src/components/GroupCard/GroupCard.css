@@ -1,17 +1,17 @@
-.eventCard {
+.groupCard {
   width: 1320px;
   height: 460px;
   border-radius: 20px;
   border: 1px solid #f4f4f4;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
   position: relative;
 }
 
-.eventCard__image {
+.groupCard__image {
   width: 100%;
 }
 
-.eventCard__title {
+.groupCard__title {
   position: absolute;
   top: 50%;
   left: 50%;

@@ -1,9 +1,9 @@
 import React from 'react';
 import Header from '../Header/Header';
 import Customers from '../Customers/Customers';
-import TreatYourself from '../TreatYourself/TreatYourself';
-import More from '../More/More';
 import Services from '../Services/Services';
+import Group from '../Group/Group';
+import Providers from '../Providers/Providers';
 import './App.css';
 
 function App() {
@@ -11,9 +11,9 @@ function App() {
     <div className="app">
       <Header />
       <Customers />
-      <TreatYourself />
-      <More />
       <Services />
+      <Group />
+      <Providers />
     </div>
   );
 }

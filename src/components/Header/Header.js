@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useQuery } from '@apollo/client';
-
 import gql from 'graphql-tag';
 
 // import { NavLink } from 'react-router-dom';
@@ -20,7 +19,6 @@ const MAIN_QUERY = gql`
 
 const Header = () => {
   const { loading, error, data } = useQuery(MAIN_QUERY);
-  console.log(data);
 
   const [navContents, setNavContents] = useState('header__navbar-contents');
 
@@ -39,6 +37,7 @@ const Header = () => {
 
     return () => window.removeEventListener('scroll', listenScrollEvent);
   }, []);
+
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
   return (

@@ -1,5 +1,5 @@
 .services {
-  padding: 100px 60px;
+  padding: 40px 60px 100px 60px;
   border-bottom: 1px solid #000;
 }
 
@@ -19,10 +19,11 @@
   color: #683d83;
 }
 
-.services__list-wrapper {
+.services__grid-wrapper {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 60px;
   list-style-type: none;
   padding: 0;
 }
+
