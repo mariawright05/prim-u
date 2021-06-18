@@ -51,7 +51,7 @@ const Header = () => {
         <nav className={navContents}>
           <div className="header__logo-container">
             <div className="header__logo" />
-            <div className="header__name">{data.mains[0].pageTagline}</div>
+            {/* <div className="header__name">{data.mains[0].pageTitle}</div> */}
           </div>
           <ul className="header__nav-container">
             <li className="header__nav-link">Make a Booking</li>
@@ -59,8 +59,8 @@ const Header = () => {
             <li className="header__nav-link">FAQ</li>
           </ul>
         </nav>
+        <h1 className="header__title">{data.mains[0].pageTagline}</h1>
       </div>
-      <h1 className="header__title">{data.mains[0].pageTitle}</h1>
     </header>
   );
 };
