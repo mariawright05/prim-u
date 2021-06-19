@@ -1,14 +1,30 @@
 .customers {
+  width: 100%;
   padding: 60px;
+  box-sizing: border-box;
 }
 
-.customers__image-container {
+.customers__content-box {
   border-radius: 20px;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
-    no-repeat center;
   height: 763px;
   max-width: 1320px;
   background-size: cover;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-content: space-between;
+  flex-direction: column;
+}
+
+.customers__dark-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
 }
 
 .customers__content-container {
@@ -17,6 +33,7 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  z-index: 1;
 }
 
 .customers__title {
@@ -33,25 +50,26 @@
 .customers__row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
 }
 
-.customers__text-container {
+.customers__body-container {
   max-width: 584px;
   padding-right: 60px;
 }
 
-.customers__text {
+.customers__body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 28px;
   color: #fff;
+  margin-top: 32px;
+  margin-bottom: 0;
 }
 
 .customers__button {
-  width: 235px;
-  height: 60px;
+  padding: 16px 30px;
   border-radius: 10px;
   border: none;
   font-family: 'Roboto Condensed';
@@ -59,4 +77,15 @@
   font-size: 24px;
   line-height: 28px;
   color: #683d83;
+  cursor: pointer;
+}
+
+.customers__button:hover {
+  background-color: #683d83;
+  color: #fff;
+  transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
 }

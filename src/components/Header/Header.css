@@ -75,6 +75,10 @@
 .header__logo {
   z-index: 10;
   transition: background 0.3s ease;
+  -o-transition: background 0.3s ease;
+  -ms-transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
+  -webkit-transition: background 0.3s ease;
   width: 158px;
   height: 51px;
   background: url('../../images/logo-white.svg') no-repeat center;
@@ -107,6 +111,10 @@
   letter-spacing: -1%;
   padding-left: 40px;
   transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  -ms-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -webkit-transition: color 0.3s ease;
 }
 
 .header__nav-link:hover {
