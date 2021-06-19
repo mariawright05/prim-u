@@ -21,14 +21,13 @@ const CUSTOMERS_QUERY = gql`
 
 const Customers = () => {
   const { loading, error, data } = useQuery(CUSTOMERS_QUERY);
-  console.log(data);
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
 
   return (
-    <div className="customers">
+    <section className="customers">
       <div
-        className="customers__image-container"
+        className="customers__content-box"
         style={{
           backgroundImage: `url(${data.forCustomers[0].section_image.url})`,
         }}
@@ -36,11 +35,11 @@ const Customers = () => {
         <div className="customers__content-container">
           <h2 className="customers__title">For Customers</h2>
           <div className="customers__row">
-            <div className="customers__text-container">
-              <p className="customers__text">
+            <div className="customers__body-container">
+              <p className="customers__body">
                 {data.forCustomers[0].section_title}
               </p>
-              <p className="customers__text">
+              <p className="customers__body">
                 {data.forCustomers[0].description_text.text}
               </p>
             </div>
@@ -53,8 +52,9 @@ const Customers = () => {
             </button>
           </div>
         </div>
+        <div className="customers__dark-overlay" />
       </div>
-    </div>
+    </section>
   );
 };
 export default Customers;

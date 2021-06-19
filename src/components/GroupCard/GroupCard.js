@@ -6,16 +6,29 @@ const GroupCard = (props) => {
 
   return (
     <li className="groupCard">
-      <img
-        className="groupCard__image"
-        src={event.groupServiceImage.url}
-        alt={event.groupService}
-      />
-      <h3 className="groupCard__title">{event.groupService}</h3>
-      <p className="groupCard__text">{event.groupServiceDescription}</p>
-      <button type="button" onClick={() => window.open(event.groupButtonLink)}>
-        {event.groupButtonText}
-      </button>
+      <div 
+        className="groupCard__content-box"
+        style={{
+          backgroundImage: `url(${event.groupServiceImage.url})`,
+        }}
+      >
+        <div className="groupCard__content-container">
+          <h3 className="groupCard__title">{event.groupService}</h3>
+          <div className="groupCard__row">
+              <p className="groupCard__body">
+                {event.groupServiceDescription}
+              </p>
+            <button
+              type="button"
+              className="groupCard__button"
+              onClick={() => window.open(event.groupButtonLink)}
+            >
+              {event.groupButtonText}
+            </button>
+          </div>
+        </div>
+        <div className="groupCard__dark-overlay" />
+      </div>
     </li>
   );
 };
