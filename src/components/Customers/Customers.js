@@ -21,7 +21,6 @@ const CUSTOMERS_QUERY = gql`
 
 const Customers = () => {
   const { loading, error, data } = useQuery(CUSTOMERS_QUERY);
-  console.log(data);
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
 
