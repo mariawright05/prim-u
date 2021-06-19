@@ -1,0 +1,38 @@
+.productCard {
+  height: 470px;
+  width: 400px;
+  border-radius: 20px;
+  margin-right: 40px;
+  background-color: #f2f2f2;
+}
+
+.productCard__title {
+  margin: 30px 24px 14px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+  color: #000000;
+}
+
+.productCard__text {
+  margin: 0 24px 30px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.productCard__price {
+  width: 79px;
+  height: 34px;
+  background: #683d83;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 24px;
+}

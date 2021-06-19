@@ -1,0 +1,13 @@
+.feedback {
+  height: 539px;
+  padding: 80px 0 80px;
+  width: 100vw;
+}
+
+.feedback__list-wrapper {
+  list-style: none;
+  padding-left: 0px;
+  display: flex;
+  flex-direction: row;
+  overflow-x: hidden;
+}
