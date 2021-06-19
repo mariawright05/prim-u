@@ -1,0 +1,42 @@
+.feedbackCard {
+  width: 500px;
+  height: 220px;
+  background: #f2f2f2;
+  border-radius: 20px;
+  padding: 20px;
+  position: relative;
+  margin-right: 40px;
+  flex-shrink: 0;
+}
+
+.feedbackCard__heading {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+.feedbackCard__stars {
+  height: 20px;
+  width: 145px;
+}
+.feedbackCard__star {
+  margin-right: 9px;
+}
+.feedbackCard__title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 28px;
+  color: #000000;
+  margin-top: 0px;
+}
+
+.feedbackCard__text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  color: #5c5c5c;
+}
