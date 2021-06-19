@@ -23,15 +23,17 @@ const Services = () => {
 
   return (
     <section className="services">
-      <h2 className="services__title">
-        Treat Yourself With{' '}
-        <span className="services__text-accent">Our Services</span>
-      </h2>
-      <ul className="services__grid-wrapper">
-        {data.services.map((card) => (
-          <ServiceCard key={uuidv4()} card={card} />
-        ))}
-      </ul>
+      <div className="services__content-box">
+        <h2 className="services__title">
+          Treat Yourself With{' '}
+          <span className="services__text-accent">Our Services</span>
+        </h2>
+        <ul className="services__grid-wrapper">
+          {data.services.map((card) => (
+            <ServiceCard key={uuidv4()} card={card} />
+          ))}
+        </ul>
+      </div>
     </section>
   );
 };

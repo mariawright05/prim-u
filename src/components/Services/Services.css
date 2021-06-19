@@ -1,6 +1,14 @@
 .services {
   padding: 40px 60px 100px 60px;
   border-bottom: 1px solid #000;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.services__content-box {
+  max-width: 1320px;
+  margin: 0 auto;
+  position: relative;
 }
 
 .services__title {
