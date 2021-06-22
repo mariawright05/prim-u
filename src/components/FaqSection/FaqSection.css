@@ -1,0 +1,7 @@
+.faq__section_wrapper {
+  padding: 10px;
+  list-style: none;
+  column-count: 2;
+  column-gap: 60px;
+}
+ 

@@ -8,6 +8,9 @@ import PrimApp from '../PrimApp/PrimApp';
 import Primlancer from '../Primlancer/Primlancer';
 import Feedback from '../Feedback/Feedback';
 import Products from '../Products/Products';
+import Faq from '../FAQ/FAQ';
+import Instagram from '../Instagram/Instagram';
+import Footer from '../Footer/Footer';
 import './App.css';
 
 function App() {
@@ -22,10 +25,21 @@ function App() {
       <Primlancer />
       <Feedback />
       <Products />
-      <button type="button" className="button">button</button>
-      <button type="button" className="button button_card">button</button>
-      <button type="button" className="button button_accent">button</button>
-      <button type="button" className="button button_lg">button</button>
+      <Faq />
+      <Instagram />
+      <Footer />
+      <button type="button" className="button">
+        button
+      </button>
+      <button type="button" className="button button_card">
+        button
+      </button>
+      <button type="button" className="button button_accent">
+        button
+      </button>
+      <button type="button" className="button button_lg">
+        button
+      </button>
     </div>
   );
 }
