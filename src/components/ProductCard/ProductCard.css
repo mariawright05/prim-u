@@ -6,8 +6,11 @@
   background-color: #f2f2f2;
 }
 
+.productCard__content {
+  margin: 30px 24px;
+}
+
 .productCard__title {
-  margin: 30px 24px 14px;
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
@@ -17,22 +20,21 @@
 }
 
 .productCard__text {
-  margin: 0 24px 30px;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 28px;
+  color: #5c5c5c;
 }
 
 .productCard__price {
-  width: 79px;
-  height: 34px;
+  font-family: Roboto;
+  padding: 3px 16px;
+  font-size: 18px;
+  line-height: 28px;
   background: #683d83;
   border-radius: 5px;
   color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 24px;
+  display: inline-block;
 }
