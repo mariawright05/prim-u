@@ -1,11 +1,11 @@
 import React from 'react'
 import './ServiceCard.css'
 
-const ServiceCard = ({card}) => (
+const ServiceCard = ({ card }) => (
     <li className="serviceCard">
       <img className="serviceCard serviceCard__image" src={card.serviceImage.url} alt={card.serviceName} />
-    <h3 className="serviceCard__text">{card.serviceName}</h3>
-    <div className="serviceCard__dark-overlay" />
+      <h3 className="serviceCard__text">{card.serviceName}</h3>
+      <div className="overlay_dark" />
     </li>
   )
 

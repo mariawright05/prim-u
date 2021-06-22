@@ -26,16 +26,18 @@ const Providers = () => {
   if (error) return <p>Error :(</p>;
 
   return (
-    <section className="providers">
-      <h2 className="providers__title">
-        For Those Who Provide{' '}
-        <span className="providers__text-accent">Beauty Services</span>
-      </h2>
-      <ul className="providers__list-wrapper">
-        {data.forProviders.map((provider) => (
-          <ProviderCard key={provider.forProviderTitle} provider={provider} />
-        ))}
-      </ul>
+    <section className="providers section-container">
+      <div className="section-content-box">
+        <h2 className="section-title">
+          For Those Who Provide{' '}
+          <span className="text-accent">Beauty Services</span>
+        </h2>
+        <ul className="providers__list-wrapper">
+          {data.forProviders.map((provider) => (
+            <ProviderCard key={provider.forProviderTitle} provider={provider} />
+          ))}
+        </ul>
+      </div>
     </section>
   );
 };
