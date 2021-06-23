@@ -15,7 +15,7 @@
 }
 
 .primApp__title {
-  font-family: Roboto Condensed;
+  font-family: 'Roboto Condensed', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 50px;
@@ -27,13 +27,12 @@
 }
 
 .primApp__description {
-  font-family: Roboto;
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
   line-height: 28px;
   color: #ffffff;
-  /* width: 630px; */
   padding: 0;
 }
 

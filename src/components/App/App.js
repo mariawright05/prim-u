@@ -28,18 +28,6 @@ function App() {
       <Faq />
       <Instagram />
       <Footer />
-      <button type="button" className="button">
-        button
-      </button>
-      <button type="button" className="button button_card">
-        button
-      </button>
-      <button type="button" className="button button_accent">
-        button
-      </button>
-      <button type="button" className="button button_lg">
-        button
-      </button>
     </div>
   );
 }
