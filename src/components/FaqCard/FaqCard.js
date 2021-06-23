@@ -18,7 +18,7 @@ const FaqCard = ({ card }) => {
               : { backgroundImage: `url(${plus})` }
           }
           onClick={() => setExpanded(!expanded)}
-        ></button>
+        />
       </div>
       {expanded && <p className="faqCard__text">{card.faqAnswer}</p>}
     </li>

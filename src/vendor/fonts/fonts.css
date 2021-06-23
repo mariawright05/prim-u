@@ -7,6 +7,14 @@
 }
 
 @font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./roboto-condensed-v19-latin-regular.woff), url(./roboto-condensed-v19-latin-regular.woff2);
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
