@@ -30,12 +30,14 @@ const FaqSection = ({ name, query }) => {
           <FaqCard key={card.id} card={card} />
         ))}
       </ul>
-      <button
-        className="button button_lg button_faq-show-more"
-        onClick={handleShowMore}
-      >
-        {expanded ? 'Show Less' : 'Show More'}
-      </button>
+      {setItemsToShow >= data.faqs.length && (
+        <button
+          className="button button_lg button_faq-show-more"
+          onClick={handleShowMore}
+        >
+          {expanded ? 'Show Less' : 'Show More'}
+        </button>
+      )}
     </div>
   );
 };
