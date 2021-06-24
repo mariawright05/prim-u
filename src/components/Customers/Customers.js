@@ -25,9 +25,9 @@ const Customers = () => {
   if (error) return <p>Error :(</p>;
 
   return (
-    <section className="customers">
+    <section className="section-container customers">
       <div
-        className="customers__content-box"
+        className="section-content-box customers__content-box"
         style={{
           backgroundImage: `url(${data.forCustomers[0].section_image.url})`,
         }}
@@ -45,14 +45,14 @@ const Customers = () => {
             </div>
             <button
               type="button"
-              className="customers__button"
+              className="button button_card"
               onClick={() => window.open(data.forCustomers[0].button_url)}
             >
               {data.forCustomers[0].button_text}
             </button>
           </div>
         </div>
-        <div className="customers__dark-overlay" />
+        <div className="overlay_dark" />
       </div>
     </section>
   );

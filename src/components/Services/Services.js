@@ -22,11 +22,11 @@ const Services = () => {
   if (error) return <p>Error :(</p>;
 
   return (
-    <section className="services">
-      <div className="services__content-box">
-        <h2 className="services__title">
+    <section className="section-container services">
+      <div className="section-content-box">
+        <h2 className="section-title">
           Treat Yourself With{' '}
-          <span className="services__text-accent">Our Services</span>
+          <span className="text-accent">Our Services</span>
         </h2>
         <ul className="services__grid-wrapper">
           {data.services.map((card) => (
