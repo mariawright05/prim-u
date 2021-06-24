@@ -9,7 +9,7 @@ const ProviderCard = ({ provider }) => (
         backgroundImage: `url(${provider.forProviderImage.url})`
       }}
     >
-      <div className="providerCard__image-content">
+      <div className="providerCard__image-text">
         <h3 className="card-title_sm">{provider.forProviderTitle}</h3>
         <button
           type="button"

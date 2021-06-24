@@ -25,10 +25,10 @@ const Group = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
   return (
-    <section className="group">
-      <div className="group__content-box">
-        <h1 className="group__title">
-          For <span className="group__text-accent">More</span> Than Just U
+    <section className="section-container group">
+      <div className="section-content-box">
+        <h1 className="section-title">
+          For <span className="text-accent">More</span> Than Just U
         </h1>
         <ul className="group__list-wrapper">
           {data.forGroups.map((event) => (

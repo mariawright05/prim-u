@@ -4,7 +4,8 @@
 }
 
 .providerCard__image-wrapper {
-  width: 630px;
+  width: 100%;
+  max-width: 630px;
   height: 460px;
   border-radius: 20px;
   border: 1px solid #f4f4f4;
@@ -15,7 +16,7 @@
   align-items: center;
 }
 
-.providerCard__image-content {
+.providerCard__image-text {
   position: absolute;
   top: 56%;
   left: 50%;

@@ -33,7 +33,7 @@ const Customers = () => {
         }}
       >
         <div className="customers__content-container">
-          <h2 className="customers__title">For Customers</h2>
+          <h2 className="card-title_lg">For Customers</h2>
           <div className="customers__row">
             <div className="customers__body-container">
               <p className="customers__body">
