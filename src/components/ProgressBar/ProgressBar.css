@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 79px auto;
+  margin: 79px auto 0;
 }
 
 .slider__button_back {
@@ -48,4 +48,5 @@
   background: #000000;
   border-radius: 2px;
   height: 2px;
+  transition: all 0.5s ease;
 }
