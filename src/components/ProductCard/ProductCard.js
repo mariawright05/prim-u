@@ -5,7 +5,7 @@ const ProductCard = ({ card }) => {
   return (
     <li className="productCard">
       <img
-        className="productImage"
+        className="productCard__image"
         src={card.productImage.url}
         alt={card.productTitle}
       />

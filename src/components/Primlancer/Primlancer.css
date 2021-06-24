@@ -11,13 +11,13 @@
 }
 
 .primlancer__video {
-  cursor: pointer;
   position: relative;
   margin-bottom: 46px;
 }
 
 .primlancer__play-icon {
   z-index: 1;
+  cursor: pointer;
 }
 
 .primlancer__video-title {

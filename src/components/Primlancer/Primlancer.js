@@ -38,6 +38,7 @@ const Providers = () => {
             width="860px"
             height="449px"
             playing
+            controls="true"
             playIcon={<img src={play} className="primlancer__play-icon"></img>}
             light={data.primlancers[0].primlancerVideoPoster.url}
           />
