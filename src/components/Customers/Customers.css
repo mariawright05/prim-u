@@ -6,7 +6,9 @@
 .customers__content-box {
   border-radius: 20px;
   height: 743px;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center bottom -300px;
   display: flex;
   align-content: space-between;
   flex-direction: column;
@@ -62,5 +64,10 @@
 
   .customers__body {
     margin-top: 20px;
+  }
+
+  .customers__content-box {
+    background-position: center center;
+    background-size: cover;
   }
 }
