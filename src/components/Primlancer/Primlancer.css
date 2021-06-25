@@ -27,6 +27,10 @@
   transform: translate(-50%, -50%);
 }
 
+.primlancer__video-title_hidden {
+  visibility: hidden;
+}
+
 .primlancer__overlay {
   margin: 9px 22px 14px;
 }

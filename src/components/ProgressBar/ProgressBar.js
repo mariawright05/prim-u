@@ -1,5 +1,6 @@
 import React from 'react';
 import './ProgressBar.css';
+import Draggable from 'react-draggable';
 
 function ProgressBar({ items, prev, next, position }) {
   return (
