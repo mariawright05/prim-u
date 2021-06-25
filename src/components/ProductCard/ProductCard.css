@@ -1,9 +1,15 @@
 .productCard {
-  height: 470px;
+  min-height: 470px;
   width: 400px;
   border-radius: 20px;
   margin-right: 40px;
   background-color: #f2f2f2;
+}
+
+.productCard__image {
+  max-height: 220px;
+  width: 400px;
+  object-fit: cover;
 }
 
 .productCard__content {

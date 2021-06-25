@@ -46,10 +46,20 @@
 .primApp__link {
   background-size: cover;
   background-repeat: no-repeat;
-  width: 118px;
   height: 38px;
   margin-right: 30px;
   margin-left: 0px;
+  cursor: pointer;
+}
+
+.apple {
+  background-image: url(../../images/apple-store-badge.svg);
+  width: 115px;
+}
+
+.google {
+  background-image: url(../../images/Google_Play_Store_badge_EN.svg);
+  width: 129px;
 }
 
 .primApp__image {
