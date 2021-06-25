@@ -146,7 +146,6 @@
 @media screen and (max-width: 1120px) {
   .button_card {
     margin-top: 40px;
-    width: 100%;
   }
 }
 
@@ -170,5 +169,19 @@
     justify-content: space-between;
     height: 100%;
     z-index: 1;
+  }
+
+  .button_card {
+    width: 100%;
+  }
+
+  .section-title {
+    font-size: 34px;
+    line-height: 40px;
+  }
+
+  .card-title_lg {
+    font-size: 34px;
+    line-height: 40px;
   }
 }
