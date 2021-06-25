@@ -37,7 +37,7 @@ const Products = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
   return (
-    <section className="section-container">
+    <section className="section-container products">
       <div className="section-content-box section-content-box-large">
         <h1 className="section-title products__title">
           <span className="text-accent">Beauty products </span> for u
