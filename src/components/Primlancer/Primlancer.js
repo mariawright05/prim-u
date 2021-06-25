@@ -29,33 +29,37 @@ const Providers = () => {
 
   return (
     <section className="primlancer section-container">
-      <div className="section-content-box primlancer__content">
+      <div className="primlancer__content-box">
         <h2 className="section-title">
           <span className="text-accent">primlancers </span>
           at work
         </h2>
-        <div className="primlancer__video">
-          <ReactPlayer
-            url={data.primlancers[0].videoUrl}
-            width="860px"
-            height="449px"
-            playing
-            onStart={() => {
-              setPlaying(true);
-            }}
-            playIcon={<img src={play} className="primlancer__play-icon"></img>}
-            light={data.primlancers[0].primlancerVideoPoster.url}
-          />
-          <h3
-            className={
+        <div className="primlancer__video-wrapper">
+          <div className="primlancer__video">
+            <ReactPlayer
+              url={data.primlancers[0].videoUrl}
+              // width="860px"
+              // height="449px"
+              width="100%"
+              height="100%"
               playing
-                ? 'primlancer__video-title_hidden'
-                : 'card-title_sm primlancer__video-title'
-            }
-          >
-            {data.primlancers[0].videoTitle}
-          </h3>
-          <div className={playing ? '' : 'overlay_dark primlancer__overlay'} />
+              onStart={() => {
+                setPlaying(true);
+              }}
+              playIcon={<img src={play} className="primlancer__play-icon"></img>}
+              light={data.primlancers[0].primlancerVideoPoster.url}
+            />
+            <h3
+              className={
+                playing
+                  ? 'primlancer__video-title_hidden'
+                  : 'card-title_sm primlancer__video-title'
+              }
+            >
+              {data.primlancers[0].videoTitle}
+            </h3>
+            <div className={playing ? '' : 'overlay_dark primlancer__overlay'} />
+          </div>
         </div>
         <button className="button button_accent">Book a Make Up</button>
       </div>

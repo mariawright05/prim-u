@@ -4,15 +4,30 @@
   border-bottom: solid 1px #000;
 }
 
-.primlancer__content {
+.primlancer__content-box {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 860px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.primlancer__video-wrapper {
+  position: relative;
+  padding-top: 56.25%;
+  width: 100%;
 }
 
 .primlancer__video {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   margin-bottom: 46px;
+  width: 100%;
+  height: 100%;
+  max-width: 860px;
+  max-height: 449px;
 }
 
 .primlancer__play-icon {

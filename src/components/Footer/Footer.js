@@ -28,7 +28,7 @@ const Footer = () => {
   if (error) return <p>Error :(</p>;
 
   return (
-    <footer className="footer">
+    <footer className="footer section-container">
       <div className="section-content-box footer__content">
         <div className="footer__column_lg">
           <h2 className="footer__heading ">PRIM-U APP © 2020</h2>

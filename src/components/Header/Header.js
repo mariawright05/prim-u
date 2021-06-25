@@ -22,12 +22,7 @@ const Header = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
   return (
-    <header
-      className="header"
-      style={{
-        backgroundImage: `url(${data.mains[0].pageHeaderImage.url})`,
-      }}
-    >
+    <header className="header">
       <div className="section-content-box header__contents">
         <nav className="header__menu-wrapper">
           <div className="header__logo-container">
