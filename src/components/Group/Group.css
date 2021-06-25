@@ -1,14 +1,7 @@
 .group {
-  padding: 100px 60px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   border-bottom: 1px solid #000;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.group__content-box {
-  max-width: 1320px;
-  margin: 0 auto;
-  position: relative;
 }
 
 .group__title {
@@ -16,7 +9,7 @@
   font-weight: 700;
   font-size: 50px;
   line-height: 58px;
-  letter-spacing: -1%;
+  letter-spacing: -0.01em;
   color: #000;
   margin: 0;
   text-transform: uppercase;

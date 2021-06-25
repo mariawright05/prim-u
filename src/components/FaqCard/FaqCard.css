@@ -1,3 +1,11 @@
+.faqCard {
+  margin: 0 0 60px 0;
+  transition: all 0.5s ease;
+  -webkit-column-break-inside: avoid;
+            page-break-inside: avoid;
+                 break-inside: avoid;
+}
+
 .faqCard__expand {
   width: 24px;
   height: 24px;
@@ -6,6 +14,9 @@
   border: none;
   background-color: white;
   background-repeat: no-repeat;
+  transition: all 0.5s ease;
+  flex-shrink: 0;
+  cursor: pointer;
 }
 
 .faqCard__heading {
@@ -15,6 +26,21 @@
   align-items: center;
 }
 
-.faqCard__expand {
-  flex-shrink: 0;
+.faqCard__title {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  margin: 0;
+  margin-right: 10px;
+}
+
+.faqCard__text {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  transition: all 0.5s ease;
+  margin: 0;
+  margin-top: 30px;
 }

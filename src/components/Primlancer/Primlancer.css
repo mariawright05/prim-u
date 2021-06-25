@@ -1,0 +1,32 @@
+.primlancer {
+  padding-top: 100px;
+  padding-bottom: 80px;
+  border-bottom: solid 1px #000;
+}
+
+.primlancer__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.primlancer__video {
+  position: relative;
+  margin-bottom: 46px;
+}
+
+.primlancer__play-icon {
+  z-index: 1;
+  cursor: pointer;
+}
+
+.primlancer__video-title {
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.primlancer__overlay {
+  margin: 9px 22px 14px;
+}

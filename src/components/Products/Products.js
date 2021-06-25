@@ -38,24 +38,26 @@ const Products = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
   return (
-    <section className="products">
-      <h1 className="products__heading">
-        <span className="group__text-accent">Beauty products </span> for u
-      </h1>
-      <ul
-        className="products__list-wrapper"
-        style={{ marginLeft: -360 * position }}
-      >
-        {data.products.map((card) => (
-          <ProductCard key={card.id} card={card} />
-        ))}
-      </ul>
-      <ProgressBar
-        items={data.products.length}
-        prev={prev}
-        next={next}
-        position={position}
-      />
+    <section className="section-container">
+      <div className="section-content-box section-content-box-large">
+        <h1 className="section-title products__title">
+          <span className="text-accent">Beauty products </span> for u
+        </h1>
+        <ul
+          className="products__list-wrapper"
+          style={{ marginLeft: -360 * position }}
+        >
+          {data.products.map((card) => (
+            <ProductCard key={card.id} card={card} />
+          ))}
+        </ul>
+        <ProgressBar
+          items={data.products.length}
+          prev={prev}
+          next={next}
+          position={position}
+        />
+      </div>
     </section>
   );
 };

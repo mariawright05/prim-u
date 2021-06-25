@@ -24,25 +24,28 @@ const Instagram = () => {
   console.log(data);
 
   return (
-    <section className="instagram">
-      <h2 className="section-title ">
-        We post interesting stuff on our
-        <span className="text-accent"> instagram</span>
-      </h2>
-
-      <div
-        className="instagram__image"
-        style={{
-          backgroundImage: `url(${data.instagrams[0].instagramPicture.url})`,
-        }}
-      ></div>
-      <h3>{data.instagrams[0].instagramDescription}</h3>
-      <button
-        className="button button_lg"
-        onClick={() => window.open(data.instagrams[0].instagramUrl)}
-      >
-        {data.instagrams[0].instagramButtonText}
-      </button>
+    <section className="section-container instagram">
+      <div className="section-content-box instagram__content-box">
+        <div
+          className="instagram__image"
+          style={{
+            backgroundImage: `url(${data.instagrams[0].instagramPicture.url})`,
+          }}
+        ></div>
+        <div className="instagram__text-wrapper">
+          <h2 className="section-title instagram__title">
+            We post interesting stuff on our
+            <span className="text-accent"> instagram</span>
+          </h2>
+          <p className="instagram__body">{data.instagrams[0].instagramDescription}</p>
+          <button
+            className="button button_lg"
+            onClick={() => window.open(data.instagrams[0].instagramUrl)}
+          >
+            {data.instagrams[0].instagramButtonText}
+          </button>
+        </div>
+      </div>
     </section>
   );
 };

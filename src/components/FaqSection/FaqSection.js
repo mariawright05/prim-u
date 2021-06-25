@@ -24,8 +24,8 @@ const FaqSection = ({ name, query }) => {
   if (error) return <p>Error :(</p>;
   return (
     <div>
-      <h2 className="faq__section_header">{name}</h2>
-      <ul className="faq__section_wrapper">
+      <h2 className="faqSection__header">{name}</h2>
+      <ul className="faqSection_list-wrapper">
         {data.faqs.slice(0, itemsToShow).map((card) => (
           <FaqCard key={card.id} card={card} />
         ))}

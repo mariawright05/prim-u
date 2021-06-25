@@ -4,6 +4,7 @@ import gql from 'graphql-tag';
 import { useState } from 'react';
 import FeedbackCard from '../FeedbackCard/FeedbackCard';
 import './Feedback.css';
+import '../App/App.css';
 import ProgressBar from '../ProgressBar/ProgressBar';
 
 const REVIEWS_QUERY = gql`
@@ -31,25 +32,28 @@ const Feedback = () => {
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
+
   return (
-    <section className="feedback">
-      <h1 className="feedback__heading">
-        What our <span className="group__text-accent">customers </span> say
-      </h1>
-      <ul
-        className="feedback__list-wrapper"
-        style={{ marginLeft: -360 * position }}
-      >
-        {data.reviews.map((card) => (
-          <FeedbackCard key={card.id} card={card} />
-        ))}
-      </ul>
-      <ProgressBar
-        items={data.reviews.length}
-        prev={prev}
-        next={next}
-        position={position}
-      />
+    <section className="section-container feedback">
+      <div className="section-content-box section-content-box-large">
+        <h1 className="section-title feedback__title">
+          What our <span className="text-accent">customers </span> say
+        </h1>
+        <ul
+          className="feedback__list-wrapper"
+          style={{ marginLeft: -360 * position }}
+        >
+          {data.reviews.map((card) => (
+            <FeedbackCard key={card.id} card={card} />
+          ))}
+        </ul>
+        <ProgressBar
+          items={data.reviews.length}
+          prev={prev}
+          next={next}
+          position={position}
+        />
+      </div>
     </section>
   );
 };

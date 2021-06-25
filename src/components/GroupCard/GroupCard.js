@@ -13,14 +13,14 @@ const GroupCard = (props) => {
         }}
       >
         <div className="groupCard__content-container">
-          <h3 className="groupCard__title">{event.groupService}</h3>
+          <h3 className="card-title_lg">{event.groupService}</h3>
           <div className="groupCard__row">
               <p className="groupCard__body">
                 {event.groupServiceDescription}
               </p>
             <button
               type="button"
-              className="groupCard__button"
+              className="button button_card"
               onClick={() => window.open(event.groupButtonLink)}
             >
               {event.groupButtonText}
