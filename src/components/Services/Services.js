@@ -24,7 +24,7 @@ const Services = () => {
   return (
     <section className="section-container services">
       <div className="section-content-box">
-        <h2 className="section-title">
+        <h2 id="services__title" className="section-title">
           Treat Yourself With{' '}
           <span className="text-accent">Our Services</span>
         </h2>
