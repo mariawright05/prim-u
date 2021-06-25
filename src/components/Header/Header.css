@@ -100,7 +100,6 @@
   .header {
     padding-right: 40px;
     padding-left: 40px;
-    /* background-position: center center; */
   }
 }
 
@@ -116,6 +115,7 @@
     padding-left: 10px;
     background-position: bottom -101px center;
     background-size: cover;
+    height: 712px;
   }
 
   .header__title {
