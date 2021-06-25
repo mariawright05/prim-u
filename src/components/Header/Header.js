@@ -2,7 +2,6 @@ import React from 'react';
 import { useQuery } from '@apollo/client';
 import gql from 'graphql-tag';
 
-// import { NavLink } from 'react-router-dom';
 import './Header.css';
 
 const MAIN_QUERY = gql`
@@ -40,7 +39,6 @@ const Header = () => {
             <li className="header__nav-link">FAQ</li>
           </ul>
         </nav>
-        {/* <Navigation /> */}
         <h1 className="header__title">{data.mains[0].pageTagline}</h1>
       </div>
     </header>
