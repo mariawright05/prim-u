@@ -79,3 +79,12 @@
   display: flex;
   justify-content: center;
 }
+
+@media screen and (max-width: 1200px) {
+
+}
+
+@media screen and (min-width: 375px) and (max-width: 768px) {
+
+}
+
