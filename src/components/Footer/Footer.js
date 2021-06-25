@@ -35,6 +35,9 @@ const Footer = () => {
           <a className="footer__link" href={data.footers[0].footerAppLink}>
             PRIM-U App
           </a>
+          <a className="footer__link" href={data.footers[0].footerPrivacyLink}>
+            Prim-U Privacy Policy
+          </a>
           <a
             className="footer__link"
             href={data.footers[0].footerUserContentLink}
@@ -55,34 +58,19 @@ const Footer = () => {
         </div>
         <div className="footer__column_sm">
           <h2 className="footer__heading ">FOLLOW US</h2>
-          <a
-            className="footer__link"
-            href={data.footers[0].footerTermsOfUseLink.footerFacebook}
-          >
+          <a className="footer__link" href={data.footers[0].footerFacebook}>
             Facebook
           </a>
-          <a
-            className="footer__link"
-            href={data.footers[0].footerTermsOfUseLink.footerTwitter}
-          >
+          <a className="footer__link" href={data.footers[0].footerTwitter}>
             Twitter
           </a>
-          <a
-            className="footer__link"
-            href={data.footers[0].footerTermsOfUseLink.footerLinkedin}
-          >
+          <a className="footer__link" href={data.footers[0].footerLinkedin}>
             Linkedin
           </a>
-          <a
-            className="footer__link"
-            href={data.footers[0].footerTermsOfUseLink.footerYoutube}
-          >
+          <a className="footer__link" href={data.footers[0].footerYoutube}>
             Youtube
           </a>
-          <a
-            className="footer__link"
-            href={data.footers[0].footerTermsOfUseLink.footerInstagram}
-          >
+          <a className="footer__link" href={data.footers[0].footerInstagram}>
             Instagram
           </a>
         </div>
