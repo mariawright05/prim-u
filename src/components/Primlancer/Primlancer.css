@@ -28,7 +28,7 @@
 }
 
 .primlancer__video-title_hidden {
-  visibility: hidden;
+  display: none;
 }
 
 .primlancer__overlay {
