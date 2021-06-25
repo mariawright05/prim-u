@@ -2,28 +2,27 @@ import React, { useState, useEffect } from 'react';
 import './Navigation.css';
 
 const Navigation = () => {
-  const [scrollDirection, setScrollDirection] = useState('');
-  let lastScroll = 0;
+  const [scrollDirection, setScrollDirection] = useState('scroll-down');
+  let lastScroll = 700;
 
   const listenScrollEvent = () => {
     const currentScroll = window.pageYOffset;
-    if (currentScroll <= 0) {
-      setScrollDirection('');
-      return;
-    }
-
+    console.log('currrentScroll: ',currentScroll);
+    console.log('lastScroll: ',lastScroll);
     if (
       currentScroll > lastScroll
-      && scrollDirection !== 'scroll-down'
+      // && scrollDirection === 'scroll-up'
     ) {
       // down
       setScrollDirection('scroll-down');
+      console.log('scroll-down active')
     } else if (
       currentScroll < lastScroll
-      && scrollDirection === 'scroll-down'
+      && currentScroll > 660
     ) {
       // up
       setScrollDirection('scroll-up')
+      console.log('scroll-up active')
     }
     lastScroll = currentScroll;
   }
@@ -34,16 +33,18 @@ const Navigation = () => {
   }, []);
   
   return (
-    <nav className={`navigation__menu-wrapper ${scrollDirection}`}>
-      <div className="header__logo-container">
-        <div className="header__logo" />
-      </div>
-      <ul className="header__nav-container">
-        <li className="header__nav-link">Make a Booking</li>
-        <li className="header__nav-link">Work With Us</li>
-        <li className="header__nav-link">FAQ</li>
-      </ul>
-    </nav>
+    <section className={`section-container navigation ${scrollDirection}`}>
+      <nav className={`navigation__menu-wrapper ${scrollDirection}`}>
+        <div className="navigation__logo-container">
+          <div className="navigation__logo" />
+        </div>
+        <ul className="header__nav-container">
+          <li className="header__nav-link">Make a Booking</li>
+          <li className="header__nav-link">Work With Us</li>
+          <li className="header__nav-link">FAQ</li>
+        </ul>
+      </nav>
+    </section>
   )
 }
 
