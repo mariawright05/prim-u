@@ -3,26 +3,20 @@ import './Navigation.css';
 
 const Navigation = () => {
   const [scrollDirection, setScrollDirection] = useState('scroll-down');
-  let lastScroll = 700;
+  let lastScroll = 660;
 
   const listenScrollEvent = () => {
     const currentScroll = window.pageYOffset;
-    console.log('currrentScroll: ',currentScroll);
-    console.log('lastScroll: ',lastScroll);
     if (
       currentScroll > lastScroll
-      // && scrollDirection === 'scroll-up'
+      || currentScroll < 660
     ) {
-      // down
       setScrollDirection('scroll-down');
-      console.log('scroll-down active')
     } else if (
       currentScroll < lastScroll
       && currentScroll > 660
     ) {
-      // up
       setScrollDirection('scroll-up')
-      console.log('scroll-up active')
     }
     lastScroll = currentScroll;
   }
@@ -38,10 +32,10 @@ const Navigation = () => {
         <div className="navigation__logo-container">
           <div className="navigation__logo" />
         </div>
-        <ul className="header__nav-container">
-          <li className="header__nav-link">Make a Booking</li>
-          <li className="header__nav-link">Work With Us</li>
-          <li className="header__nav-link">FAQ</li>
+        <ul className="navigation__nav-container">
+          <li className="navigation__nav-link">Make a Booking</li>
+          <li className="navigation__nav-link">Work With Us</li>
+          <li className="navigation__nav-link">FAQ</li>
         </ul>
       </nav>
     </section>

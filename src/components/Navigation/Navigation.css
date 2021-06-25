@@ -1,8 +1,12 @@
 .navigation {
-  /* background-color: #fff;
-  box-shadow: 0 9px 9px -9px rgba(0, 0, 0, 0.13); */
-  border-bottom: solid 1px #000;
+  background-color: #fff;
+  box-shadow: 0 9px 9px -9px rgba(0, 0, 0, 0.13);
+  position: fixed;
+  height: 82px;
+  top: 0;
+  left: 0;
   z-index: 2;
+  transition: all 0.6s;
 }
 
 .navigation__menu-wrapper {
@@ -13,7 +17,7 @@
   left: 50%;
   top: 0;
   transform: translate(-50%);
-  padding: 14px 0;
+  padding: 12px 0;
   z-index: 2;
   transition: all 0.6s;
   width: 100%;
@@ -23,56 +27,11 @@
 .scroll-down {
   /* transform: translate(-50%, -100%); */
   top: -100px;
+  height: 0;
 }
 
 .scroll-up {
   top: 0;
-  /* transform: none;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.35); */
-}
-
-/* .scroll-up:not {
-
-} */
-
-.header__navbar-contents_reverse {
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 60px;
-  background-color: #000;
-  color: #000;
-  justify-content: space-between;
-  align-items: center;
-  transform: translateY(10);
-  transition: transform 0.6s ease;
-  animation: navAnimation 3s;
-  z-index: 2;
-  padding: 10px 60px;
-}
-
-@keyframes navAnimation {
-  0% {
-    background-color: transparent;
-    color: transparent;
-  }
-  35% {
-    background-color: #fff;
-    color: #000;
-  }
-  100% {
-    background-color: #fff;
-    color: #000;
-  }
-}
-
-.header__navbar-contents.shadow {
-  box-shadow: 0 9px 9px -9px rgba(0, 0, 0, 0.13);
-}
-
-.header__navbar-contents.hidden {
-  transform: translateY(-110%);
 }
 
 .navigation__logo-container {
@@ -100,20 +59,11 @@
   background: url('../../images/logo-hover.svg') no-repeat center;
 }
 
-.header__name {
-  font-family: 'Roboto', sans-serif;
-  text-transform: uppercase;
-  font-size: 30px;
-  line-height: 35px;
-  font-weight: 900;
-  letter-spacing: 3%;
-}
-
-.header__nav-container {
+.navigation__nav-container {
   display: flex;
 }
 
-.header__nav-link {
+.navigation__nav-link {
   list-style-type: none;
   font-family: 'Roboto Condensed', sans-serif;
   text-transform: uppercase;
@@ -129,7 +79,7 @@
   -webkit-transition: color 0.3s ease;
 }
 
-.header__nav-link:hover {
+.navigation__nav-link:hover {
   cursor: pointer;
   color: #683d83;
 }
