@@ -1,17 +1,15 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { useQuery } from '@apollo/client';
 import gql from 'graphql-tag';
-import { useState } from 'react';
 import FaqCard from '../FaqCard/FaqCard';
 import './FaqSection.css';
 
 const FaqSection = ({ name, query }) => {
   const { loading, error, data } = useQuery(query);
-  const [itemsToShow, setItemsToShow] = React.useState(10);
-  const [expanded, setExpanded] = React.useState(false);
+  const [itemsToShow, setItemsToShow] = useState(10);
+  const [expanded, setExpanded] = useState(false);
 
   const handleShowMore = () => {
-    console.log(data.faqs.length);
     setExpanded(!expanded);
     if (!expanded) {
       setItemsToShow(data.faqs.length);
@@ -30,12 +28,14 @@ const FaqSection = ({ name, query }) => {
           <FaqCard key={card.id} card={card} />
         ))}
       </ul>
-      <button
-        className="button button_lg faqSection__button"
-        onClick={handleShowMore}
-      >
-        {expanded ? 'Show Less' : 'Show More'}
-      </button>
+      {itemsToShow <= data.faqs.length && (
+        <button
+          className="button button_lg button_faq-show-more"
+          onClick={handleShowMore}
+        >
+          {expanded ? 'Show Less' : 'Show More'}
+        </button>
+      )}
     </div>
   );
 };

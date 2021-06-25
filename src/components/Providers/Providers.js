@@ -11,7 +11,9 @@ const PROVIDERS_QUERY = gql`
       forProviderTitle
       forProviderButtonUrl
       forProviderButtonText
-      forProviderDescription
+      forProviderDescription {
+        text
+      }
       forProviderImage {
         url
       }

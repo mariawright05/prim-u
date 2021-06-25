@@ -5,6 +5,9 @@ import minus from '../../images/minus.svg';
 
 const FaqCard = ({ card }) => {
   const [expanded, setExpanded] = React.useState(false);
+  function newLine(text) {
+    return text.split('\n').map((str) => <p>{str}</p>);
+  }
 
   return (
     <li className="faqCard">
@@ -20,7 +23,7 @@ const FaqCard = ({ card }) => {
           onClick={() => setExpanded(!expanded)}
         />
       </div>
-      {expanded && <p className="faqCard__text">{card.faqAnswer}</p>}
+      {expanded && <p className="faqCard__text">{newLine(card.faqAnswer)}</p>}
     </li>
   );
 };

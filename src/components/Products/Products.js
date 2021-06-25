@@ -29,7 +29,6 @@ const Products = () => {
     if (position > 0) setPosition((s) => --s);
   };
   const next = () => {
-    console.log(`initial position ${position}`);
     if (position < data.products.length) setPosition((s) => ++s);
   };
 
@@ -39,7 +38,7 @@ const Products = () => {
   if (error) return <p>Error :(</p>;
   return (
     <section className="section-container products">
-      <div className="section-content-box">
+      <div className="section-content-box section-content-box-large">
         <h1 className="section-title products__title">
           <span className="text-accent">Beauty products </span> for u
         </h1>
@@ -57,7 +56,7 @@ const Products = () => {
           next={next}
           position={position}
         />
-      </div> 
+      </div>
     </section>
   );
 };

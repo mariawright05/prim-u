@@ -32,10 +32,10 @@ const Feedback = () => {
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
-  
+
   return (
     <section className="section-container feedback">
-      <div className="section-content-box">
+      <div className="section-content-box section-content-box-large">
         <h1 className="section-title feedback__title">
           What our <span className="text-accent">customers </span> say
         </h1>
