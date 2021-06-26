@@ -24,17 +24,24 @@ const FAQ_QUERY_2 = gql`
   }
 `;
 
-const Faq = () => {
-  
+const Faq = (props) => {
   return (
     <section className="section-container faq">
       <div className="section-content-box">
         <h1 className="section-title">
           Frequently asked <span className="text-accent">questions</span>
         </h1>
-        <FaqSection name="For Customers" query={FAQ_QUERY_1} />
+        <FaqSection
+          name="For Customers"
+          query={FAQ_QUERY_1}
+          width={props.width}
+        />
         <div className="faq__spacer" />
-        <FaqSection name="For Partners" query={FAQ_QUERY_2} />
+        <FaqSection
+          name="For Partners"
+          query={FAQ_QUERY_2}
+          width={props.width}
+        />
       </div>
     </section>
   );
