@@ -55,20 +55,45 @@
   cursor: pointer;
 }
 
-.header__logo {
-  z-index: 10;
+.header__logo-container:hover > .header__logo {
   transition: background 0.3s ease;
   -o-transition: background 0.3s ease;
   -ms-transition: background 0.3s ease;
   -moz-transition: background 0.3s ease;
   -webkit-transition: background 0.3s ease;
-  width: 158px;
+  background: url('../../images/Logo-hover.png') no-repeat center;
+}
+
+.header__logo-container:hover > .header__text {
+  color: #683d83;
+  transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  -ms-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -webkit-transition: color 0.3s ease;
+}
+
+.header__logo {
+  z-index: 10;
+  width: 32px;
   height: 51px;
-  background: url('../../images/logo-white.svg') no-repeat center;
+  margin-right: 12px;
+  background: url('../../images/Logo_white.png') no-repeat center;
+}
+
+.header__text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 35px;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  text-transform: uppercase;
 }
 
 .header__logo:hover {
-  background: url('../../images/logo-hover.svg') no-repeat center;
+  background: url('../../images/Logo-hover.png') no-repeat center;
 }
 
 .header__nav-container {
@@ -84,11 +109,6 @@
   font-weight: 700;
   letter-spacing: -0.01em;
   padding-left: 40px;
-  transition: color 0.3s ease;
-  -o-transition: color 0.3s ease;
-  -ms-transition: color 0.3s ease;
-  -moz-transition: color 0.3s ease;
-  -webkit-transition: color 0.3s ease;
 }
 
 .header__nav-link:hover {

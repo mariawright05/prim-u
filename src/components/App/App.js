@@ -1,4 +1,6 @@
 import React from 'react';
+import { useQuery } from '@apollo/client';
+import gql from 'graphql-tag';
 import Navigation from '../Navigation/Navigation';
 import Header from '../Header/Header';
 import Customers from '../Customers/Customers';
@@ -14,11 +16,24 @@ import Instagram from '../Instagram/Instagram';
 import Footer from '../Footer/Footer';
 import './App.css';
 
+const MAIN_QUERY = gql`
+  {
+    mains {
+      pageTagline
+      pageTitle
+    }
+  }
+`;
+
 function App() {
+  const { loading, error, data } = useQuery(MAIN_QUERY);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error :(</p>;
   return (
     <div className="app">
-      <Navigation />
-      <Header />
+      <Navigation logoText={data.mains[0].pageTitle} />
+      <Header logoText={data.mains[0].pageTitle} tagLine= {data.mains[0].pageTagline}/>
       <Customers />
       <Services />
       <Group />

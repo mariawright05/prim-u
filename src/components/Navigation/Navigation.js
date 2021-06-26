@@ -2,22 +2,16 @@ import { printIntrospectionSchema } from 'graphql';
 import React, { useState, useEffect } from 'react';
 import './Navigation.css';
 
-const Navigation = () => {
+const Navigation = (props) => {
   const [scrollDirection, setScrollDirection] = useState('scroll-down');
   let lastScroll = 660;
 
   const listenScrollEvent = () => {
     const currentScroll = window.pageYOffset;
-    if (
-      currentScroll > lastScroll
-      || currentScroll < 660
-    ) {
+    if (currentScroll > lastScroll || currentScroll < 660) {
       setScrollDirection('scroll-down');
-    } else if (
-      currentScroll < lastScroll
-      && currentScroll > 660
-    ) {
-      setScrollDirection('scroll-up')
+    } else if (currentScroll < lastScroll && currentScroll > 660) {
+      setScrollDirection('scroll-up');
     }
     lastScroll = currentScroll;
   };
@@ -32,6 +26,7 @@ const Navigation = () => {
       <nav className={`navigation__menu-wrapper ${scrollDirection}`}>
         <div className="navigation__logo-container">
           <div className="navigation__logo" />
+          <div className="navigation__logo_text">{props.logoText}</div>
         </div>
         <ul className="navigation__nav-container">
           <li className="navigation__nav-link">Make a Booking</li>
@@ -40,8 +35,8 @@ const Navigation = () => {
         </ul>
       </nav>
     </section>
-  )
-}
+  );
+};
 
 // const Navigation = () => {
 //   const [navContents, setNavContents] = useState('header__navbar-contents');
