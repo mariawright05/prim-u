@@ -3,6 +3,10 @@ import './ProgressBar.css';
 import Draggable from 'react-draggable';
 
 function ProgressBar({ items, prev, next, position }) {
+  const move = (data) => {
+    console.log(data);
+  };
+
   return (
     <div className="slider__container">
       <button

@@ -1,7 +1,8 @@
+import { printIntrospectionSchema } from 'graphql';
 import React, { useState, useEffect } from 'react';
 import './Navigation.css';
 
-const Navigation = () => {
+const Navigation = (props) => {
   const [scrollDirection, setScrollDirection] = useState('');
   let lastScroll = 0;
 
@@ -12,31 +13,29 @@ const Navigation = () => {
       return;
     }
 
-    if (
-      currentScroll > lastScroll
-      && scrollDirection !== 'scroll-down'
-    ) {
+    if (currentScroll > lastScroll && scrollDirection !== 'scroll-down') {
       // down
       setScrollDirection('scroll-down');
     } else if (
-      currentScroll < lastScroll
-      && scrollDirection === 'scroll-down'
+      currentScroll < lastScroll &&
+      scrollDirection === 'scroll-down'
     ) {
       // up
-      setScrollDirection('scroll-up')
+      setScrollDirection('scroll-up');
     }
     lastScroll = currentScroll;
-  }
+  };
 
   useEffect(() => {
     window.addEventListener('scroll', listenScrollEvent);
     return () => window.removeEventListener('scroll', listenScrollEvent);
   }, []);
-  
+
   return (
     <nav className={`navigation__menu-wrapper ${scrollDirection}`}>
       <div className="header__logo-container">
         <div className="header__logo" />
+        <div className="header__logo_text">{props.logoText}</div>
       </div>
       <ul className="header__nav-container">
         <li className="header__nav-link">Make a Booking</li>
@@ -44,8 +43,8 @@ const Navigation = () => {
         <li className="header__nav-link">FAQ</li>
       </ul>
     </nav>
-  )
-}
+  );
+};
 
 // const Navigation = () => {
 //   const [navContents, setNavContents] = useState('header__navbar-contents');
@@ -65,7 +64,7 @@ const Navigation = () => {
 
 //     return () => window.removeEventListener('scroll', listenScrollEvent);
 //   }, []);
-  
+
 //   return (
 //     <nav className={navContents}>
 //       <div className="header__logo-container">
@@ -80,4 +79,4 @@ const Navigation = () => {
 //   )
 // }
 
-export default Navigation
+export default Navigation;

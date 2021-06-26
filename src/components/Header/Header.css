@@ -1,5 +1,6 @@
 .header {
   background-repeat: no-repeat;
+  background-image: url('../../images/header-image.png');
   background-size: cover;
   background-position: center right;
   height: 700px;

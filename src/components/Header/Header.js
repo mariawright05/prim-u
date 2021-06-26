@@ -11,9 +11,6 @@ const MAIN_QUERY = gql`
     mains {
       pageTagline
       pageTitle
-      pageHeaderImage {
-        url
-      }
     }
   }
 `;
@@ -24,14 +21,9 @@ const Header = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
   return (
-    <header
-      className="header"
-      style={{
-        backgroundImage: `url(${data.mains[0].pageHeaderImage.url})`,
-      }}
-    >
+    <header className="header">
       <div className="section-content-box header__contents">
-        <Navigation />
+        <Navigation logoText={data.mains[0].pageTitle} />
         <h1 className="header__title">{data.mains[0].pageTagline}</h1>
       </div>
     </header>
