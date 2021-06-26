@@ -8,16 +8,17 @@ const ProviderCard = ({ provider }) => {
 
   return (
     <li className="providerCard">
-      <div
-        className="providerCard__image-wrapper"
-        style={{
-          backgroundImage: `url(${provider.forProviderImage.url})`,
-        }}
-      >
+      <div className="providerCard__image-wrapper">
+        <div className="providerCard__image"
+          style={{
+            backgroundImage: `url(${provider.forProviderImage.url})`,
+          }}
+        />
         <div className="providerCard__image-text">
           <h3 className="card-title_sm">{provider.forProviderTitle}</h3>
           <button
             type="button"
+            id="providerCard__button"
             className="button button_card"
             onClick={() => window.open(provider.forProviderButtonUrl)}
           >

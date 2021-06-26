@@ -8,6 +8,7 @@
   height: 460px;
   max-width: 1320px;
   background-size: cover;
+  background-position: center center;
   margin: 0 auto;
   position: relative;
   display: flex;
@@ -56,4 +57,35 @@
   margin-bottom: 0;
   max-width: 584px;
   padding-right: 60px;
+}
+
+@media screen and (max-width: 1120px) {
+  .groupCard__row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #groupCard__button {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 768px) {
+  .groupCard__content-box {
+    height: auto;
+  }
+
+  .groupCard__content-container {
+    padding: 30px 20px 20px 20px;
+    max-width: 100%;
+  }
+
+  .groupCard__body {
+    padding-right: 0;
+    max-width: 100%;
+  }
+
+  #button {
+    margin-top: 16px;
+  }
 }

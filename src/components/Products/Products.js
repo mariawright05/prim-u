@@ -47,9 +47,9 @@ const Products = () => {
   return (
     <section className="section-container products">
       <div className="section-content-box section-content-box-large">
-        <h1 className="section-title products__title">
+        <h2 className="section-title products__title">
           <span className="text-accent">Beauty products </span> for u
-        </h1>
+        </h2>
         <ul
           className="products__list-wrapper"
           style={{ marginLeft: -360 * position }}
@@ -64,6 +64,9 @@ const Products = () => {
           next={next}
           position={position}
         />
+        <div className="products__button-wrapper">
+          <button id="products__button" className="button button_accent">Check out beauty products</button>
+        </div>
       </div>
     </section>
   );
