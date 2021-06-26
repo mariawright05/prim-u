@@ -1,20 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useQuery } from '@apollo/client';
 // import gql from 'graphql-tag';
 import FaqCard from '../FaqCard/FaqCard';
 import './FaqSection.css';
 
-const FaqSection = ({ name, query }) => {
+const FaqSection = ({ name, query, width }) => {
+  const defaultItemNumber = 10;
+
   const { loading, error, data } = useQuery(query);
-  const [itemsToShow, setItemsToShow] = useState(10);
+  const [itemsToShow, setItemsToShow] = useState(defaultItemNumber);
   const [expanded, setExpanded] = useState(false);
+
+  const determineItemNumber = (w) => {
+    if (w < 769) {
+      console.log(w);
+      return 5;
+    } else {
+      return defaultItemNumber;
+    }
+  };
+
+  useEffect(() => {
+    const itemNum = determineItemNumber(width);
+    setItemsToShow(itemNum);
+  }, [width]);
 
   const handleShowMore = () => {
     setExpanded(!expanded);
     if (!expanded) {
       setItemsToShow(data.faqs.length);
     } else {
-      setItemsToShow(10);
+      setItemsToShow(determineItemNumber(width));
     }
   };
 
