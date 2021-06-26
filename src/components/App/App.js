@@ -83,6 +83,7 @@ function App() {
         mobile={mobile}
         width={width}
       />
+
       <Instagram />
       <Footer />
     </div>

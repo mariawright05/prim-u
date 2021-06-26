@@ -6,10 +6,13 @@ import './FaqSection.css';
 
 const FaqSection = ({ name, query, width }) => {
   const defaultItemNumber = 10;
-
   const { loading, error, data } = useQuery(query);
   const [itemsToShow, setItemsToShow] = useState(defaultItemNumber);
   const [expanded, setExpanded] = useState(false);
+  useEffect(() => {
+    const itemNum = determineItemNumber(width);
+    setItemsToShow(itemNum);
+  }, [width]);
 
   const determineItemNumber = (w) => {
     if (w < 769) {
@@ -19,11 +22,6 @@ const FaqSection = ({ name, query, width }) => {
       return defaultItemNumber;
     }
   };
-
-  useEffect(() => {
-    const itemNum = determineItemNumber(width);
-    setItemsToShow(itemNum);
-  }, [width]);
 
   const handleShowMore = () => {
     setExpanded(!expanded);
