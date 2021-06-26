@@ -20,7 +20,7 @@ const GroupCard = (props) => {
               </p>
             <button
               type="button"
-              id="button"
+              id="groupCard__button"
               className="button button_card"
               onClick={() => window.open(event.groupButtonLink)}
             >

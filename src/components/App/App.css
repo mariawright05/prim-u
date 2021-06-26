@@ -143,12 +143,6 @@
   color: #fff;
 }
 
-@media screen and (max-width: 1120px) {
-  .button_card {
-    margin-top: 40px;
-  }
-}
-
 @media screen and (max-width: 1024px) {
   .section-container {
     padding-right: 40px;
@@ -185,8 +179,8 @@
     line-height: 40px;
   }
 
-  /* .card-title_sm {
-    font-size: 30px;
-    line-height: 35px;
-  } */
+  .card-title_sm {
+    font-size: 34px;
+    line-height: 40px;
+  }
 }

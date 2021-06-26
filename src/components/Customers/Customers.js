@@ -45,6 +45,7 @@ const Customers = () => {
             </div>
             <button
               type="button"
+              id="customers__button"
               className="button button_card"
               onClick={() => window.open(data.forCustomers[0].button_url)}
             >

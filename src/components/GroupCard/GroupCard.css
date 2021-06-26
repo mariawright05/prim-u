@@ -64,6 +64,10 @@
     flex-direction: column;
     align-items: flex-start;
   }
+
+  #groupCard__button {
+    margin-top: 40px;
+  }
 }
 
 @media screen and (min-width: 375px) and (max-width: 768px) {
