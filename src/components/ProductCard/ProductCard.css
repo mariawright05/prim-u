@@ -44,3 +44,24 @@
   color: white;
   display: inline-block;
 }
+
+@media screen and (max-width: 1024px) {
+  .productCard {
+    min-height: 508px;
+    width: 284px;
+  }
+
+  .productCard__content {
+    margin: 26px 16px;
+  }
+
+  .productCard__image {
+    width: 284px;
+    height: 284px;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 768px) {
+
+}
+

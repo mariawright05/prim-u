@@ -22,5 +22,10 @@
   .feedback {
     padding-top: 60px;
   }
+
+  .feedback__title {
+    max-width: 320px;
+    margin: 0 auto 40px;
+  }
 }
 
