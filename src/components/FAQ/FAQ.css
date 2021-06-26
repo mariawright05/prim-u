@@ -5,11 +5,15 @@
 }
 
 .faq__spacer {
-  padding: 20px;
+  padding-top: 100px;
 }
 
 @media screen and (min-width: 375px) and (max-width: 768px) {
   .faq {
     padding: 60px 20px;
+  }
+
+  .faq__spacer {
+    padding-top: 80px;
   }
 }

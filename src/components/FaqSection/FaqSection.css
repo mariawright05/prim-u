@@ -38,4 +38,8 @@
     font-size: 24px;
     line-height: 28px;
   }
+
+  .button_faq-show-more {
+    margin: 0 auto;
+  }
 }
