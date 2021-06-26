@@ -43,18 +43,41 @@
   cursor: pointer;
 }
 
-.navigation__logo {
-  z-index: 10;
+.navigation__logo-container:hover > .navigation__logo {
   transition: background 0.3s ease;
   -o-transition: background 0.3s ease;
   -ms-transition: background 0.3s ease;
   -moz-transition: background 0.3s ease;
   -webkit-transition: background 0.3s ease;
+  background: url('../../images/Logo-hover.png') no-repeat center;
+}
+
+.navigation__logo-container:hover > .navigation__logo_text {
   transition: color 0.3s ease;
   -o-transition: color 0.3s ease;
   -ms-transition: color 0.3s ease;
   -moz-transition: color 0.3s ease;
   -webkit-transition: color 0.3s ease;
+  color: #683d83;
+}
+
+.navigation__logo {
+  width: 32px;
+  height: 51px;
+  background: url('../../images/Logo_black.png') no-repeat center;
+  margin-right: 12px;
+  z-index: 10;
+}
+
+.navigation__logo_text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 35px;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #000000;
 }
 
 .header__logo {
