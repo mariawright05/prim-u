@@ -32,6 +32,14 @@ const Products = () => {
     if (position < data.products.length) setPosition((s) => ++s);
   };
 
+  const move = (delta) => {
+    if (delta > position) {
+      setPosition((s) => ++s);
+    } else {
+      setPosition((s) => --s);
+    }
+  };
+
   const { loading, error, data } = useQuery(PRODUCTS_QUERY);
 
   if (loading) return <p>Loading...</p>;

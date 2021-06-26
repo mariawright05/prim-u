@@ -1,3 +1,4 @@
+import { printIntrospectionSchema } from 'graphql';
 import React, { useState, useEffect } from 'react';
 import './Navigation.css';
 
@@ -19,13 +20,13 @@ const Navigation = () => {
       setScrollDirection('scroll-up')
     }
     lastScroll = currentScroll;
-  }
+  };
 
   useEffect(() => {
     window.addEventListener('scroll', listenScrollEvent);
     return () => window.removeEventListener('scroll', listenScrollEvent);
   }, []);
-  
+
   return (
     <section className={`section-container navigation ${scrollDirection}`}>
       <nav className={`navigation__menu-wrapper ${scrollDirection}`}>
@@ -60,7 +61,7 @@ const Navigation = () => {
 
 //     return () => window.removeEventListener('scroll', listenScrollEvent);
 //   }, []);
-  
+
 //   return (
 //     <nav className={navContents}>
 //       <div className="header__logo-container">
@@ -75,4 +76,4 @@ const Navigation = () => {
 //   )
 // }
 
-export default Navigation
+export default Navigation;

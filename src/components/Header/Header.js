@@ -9,9 +9,6 @@ const MAIN_QUERY = gql`
     mains {
       pageTagline
       pageTitle
-      pageHeaderImage {
-        url
-      }
     }
   }
 `;

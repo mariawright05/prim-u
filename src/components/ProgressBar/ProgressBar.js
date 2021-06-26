@@ -2,6 +2,10 @@ import React from 'react';
 import './ProgressBar.css';
 
 function ProgressBar({ items, prev, next, position }) {
+  const move = (data) => {
+    console.log(data);
+  };
+
   return (
     <div className="slider__container">
       <button
