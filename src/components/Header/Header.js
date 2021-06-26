@@ -3,6 +3,11 @@ import React from 'react';
 import './Header.css';
 
 const Header = (props) => {
+  const handleHamburgerClick = () => {
+    console.log(props.mobile);
+    props.mobile ? props.onOpen() : () => {};
+  };
+
   return (
     <header className="header">
       <div className="section-content-box header__contents">
@@ -11,7 +16,7 @@ const Header = (props) => {
             <div className="header__logo" />
             <div className="header__text">{props.logoText}</div>
           </div>
-          <ul className="header__nav-container">
+          <ul className="header__nav-container" onClick={handleHamburgerClick}>
             <li className="header__nav-link">Make a Booking</li>
             <li className="header__nav-link">Work With Us</li>
             <li className="header__nav-link">FAQ</li>

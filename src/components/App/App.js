@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useQuery } from '@apollo/client';
 import gql from 'graphql-tag';
 import Navigation from '../Navigation/Navigation';
@@ -15,6 +15,7 @@ import Faq from '../FAQ/FAQ';
 import Instagram from '../Instagram/Instagram';
 import Footer from '../Footer/Footer';
 import './App.css';
+import NavigationMobile from '../NavigationMobile/NavigationMobile';
 
 const MAIN_QUERY = gql`
   {
@@ -26,14 +27,50 @@ const MAIN_QUERY = gql`
 `;
 
 function App() {
+  const [mobile, setMobile] = useState(false);
+  const [width, setWidth] = useState(window.innerWidth);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const breakpoint = 377;
+
+  React.useEffect(() => {
+    const handleWindowResize = () => setWidth(window.innerWidth);
+    window.addEventListener('resize', handleWindowResize);
+    width <= breakpoint ? setMobile(true) : setMobile(false);
+    return () => window.removeEventListener('resize', handleWindowResize);
+  }, [width]);
+
+  function handleCloseMenu() {
+    setMobileMenuOpen(false);
+  }
+
+  function handleOpenMenu() {
+    console.log('click');
+    setMobileMenuOpen(true);
+  }
+
   const { loading, error, data } = useQuery(MAIN_QUERY);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
   return (
     <div className="app">
-      <Navigation logoText={data.mains[0].pageTitle} />
-      <Header logoText={data.mains[0].pageTitle} tagLine= {data.mains[0].pageTagline}/>
+      {mobile ? (
+        <NavigationMobile
+          open={mobileMenuOpen}
+          onClose={handleCloseMenu}
+          logoText={data.mains[0].pageTitle}
+        />
+      ) : (
+        <Navigation logoText={data.mains[0].pageTitle} />
+      )}
+      <Header
+        mobile={mobile}
+        onOpen={handleOpenMenu}
+        onClose={handleCloseMenu}
+        mobileMenuOpen={mobileMenuOpen}
+        logoText={data.mains[0].pageTitle}
+        tagLine={data.mains[0].pageTagline}
+      />
       <Customers />
       <Services />
       <Group />
