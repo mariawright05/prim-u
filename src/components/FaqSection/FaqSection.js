@@ -1,6 +1,6 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { useQuery } from '@apollo/client';
-import gql from 'graphql-tag';
+// import gql from 'graphql-tag';
 import FaqCard from '../FaqCard/FaqCard';
 import './FaqSection.css';
 
