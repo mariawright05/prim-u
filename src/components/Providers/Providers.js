@@ -30,7 +30,7 @@ const Providers = () => {
   return (
     <section className="providers section-container">
       <div className="section-content-box">
-        <h2 className="section-title">
+        <h2 id="providers__title" className="section-title">
           For Those Who Provide{' '}
           <span className="text-accent">Beauty Services</span>
         </h2>

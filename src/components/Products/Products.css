@@ -17,3 +17,35 @@
   transition: all 0.5s ease;
   overflow: hidden;
 }
+
+.products__button-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+#products__button {
+  padding-left: 44px;
+  padding-right: 44px;
+  margin-top: 55px;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (min-width: 375px) and (max-width: 768px) {
+  .products {
+    padding-top: 60px;
+    padding-bottom: 55px;
+  }
+
+  .products__title {
+    max-width: 320px;
+    margin: 0 auto 30px;
+  }
+
+  #products__button {
+    display: none;
+  }
+}

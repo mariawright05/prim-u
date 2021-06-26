@@ -15,7 +15,7 @@
   background-color: #fff;
   font-family: 'Roboto', 'Helvetica', sans-serif;
   color: #000;
-  min-width: 375px;
+  /* min-width: 375px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -141,4 +141,60 @@
 .button_lg:hover {
   background-color: #683d83;
   color: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+  .section-container {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  .button_lg {
+    min-width: 0;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 768px) {
+  .section-container {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .customers__content-container {
+    padding: 36px 16px 24px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .button_card {
+    width: 100%;
+  }
+
+  .button_lg {
+    padding: 16px 0;
+    width: 100%;
+    font-size: 24px;
+    line-height: 28px;
+    min-width: 0;
+  }
+
+  .section-title {
+    font-size: 34px;
+    line-height: 40px;
+  }
+
+  .card-title_lg {
+    font-size: 34px;
+    line-height: 40px;
+  }
+
+  .card-title_sm {
+    font-size: 34px;
+    line-height: 40px;
+  }
 }

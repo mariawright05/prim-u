@@ -4,6 +4,10 @@
   border-bottom: 1px solid #000;
 }
 
+#services__title {
+  margin-bottom: 30px;
+}
+
 .services__grid-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -12,3 +16,20 @@
   padding: 0;
 }
 
+@media screen and (max-width: 1024px) {
+  .services__grid-wrapper {
+    grid-gap: 40px;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 900px) {
+  .services {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+
+  .services__grid-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+}

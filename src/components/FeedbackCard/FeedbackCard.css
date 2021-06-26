@@ -40,3 +40,16 @@
   line-height: 28px;
   color: #5c5c5c;
 }
+
+@media screen and (max-width: 1024px) {
+  .feedbackCard {
+    width: 434px;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 768px) {
+  .feedbackCard {
+    width: 355px;
+  }
+}
+
