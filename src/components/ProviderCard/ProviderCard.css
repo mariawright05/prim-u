@@ -51,6 +51,8 @@
   margin-bottom: 0;
 }
 
-@media screen and (min-width: 375px) and (max-width: 768px) {
-
+@media screen and (min-width: 375px) and (max-width: 645px) {
+  .providerCard__body {
+    padding: 0 10px;
+  }
 }
