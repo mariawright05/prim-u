@@ -25,7 +25,6 @@ const Providers = () => {
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
-  console.log(data);
 
   return (
     <section className="primlancer section-container">

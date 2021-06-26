@@ -9,7 +9,6 @@ const FaqSection = ({ name, query, width }) => {
   const { loading, error, data } = useQuery(query);
   const [itemsToShow, setItemsToShow] = useState(defaultItemNumber);
   const [expanded, setExpanded] = useState(false);
-
   useEffect(() => {
     const itemNum = determineItemNumber(width);
     setItemsToShow(itemNum);

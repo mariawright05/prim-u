@@ -79,7 +79,11 @@ function App() {
       <Primlancer />
       <Feedback />
       <Products />
-      <Faq width={width} />
+      <Faq
+        mobile={mobile}
+        width={width}
+      />
+
       <Instagram />
       <Footer />
     </div>
