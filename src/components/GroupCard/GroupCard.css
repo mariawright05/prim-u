@@ -71,6 +71,10 @@
 }
 
 @media screen and (min-width: 375px) and (max-width: 768px) {
+  .groupCard__content-box {
+    height: auto;
+  }
+
   .groupCard__content-container {
     padding: 30px 20px 20px 20px;
     max-width: 100%;

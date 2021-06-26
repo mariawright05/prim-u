@@ -128,4 +128,8 @@
   .header__contents {
     align-items: center;
   }
+
+  .header__menu-wrapper {
+    display: none;
+  }
 }
