@@ -45,33 +45,23 @@ const PrimApp = () => {
           </div>
           <ul className="primApp__links">
             <li
-              className="primApp__link apple"
+              id="apple"
+              className="primApp__link"
               onClick={() => window.open(data.apps[0].appLinkApple)}
             />
             <li
-              className="primApp__link google"
+              id="google"
+              className="primApp__link"
               onClick={() => window.open(data.apps[0].appLinkGoogle)}
             />
-            {/* <li
-              className="primApp__link"
-              style={{
-                backgroundImage: `url(${data.apps[0].appButtonApple.url})`,
-              }}
-              onClick={() => window.open(data.apps[0].appLinkApple)}
-            />
-            <li
-              className="primApp__link"
-              style={{
-                backgroundImage: `url(${data.apps[0].appButtonGoogle.url})`,
-              }}
-              onClick={() => window.open(data.apps[0].appLinkGoogle)}
-            /> */}
           </ul>
         </div>
-        <div
-          className="primApp__image"
-          style={{ backgroundImage: `url(${data.apps[0].appImage.url})` }}
-        ></div>
+        <div className="primApp__image-wrapper">
+          <div
+            className="primApp__image"
+            style={{ backgroundImage: `url(${data.apps[0].appImage.url})` }}
+          />
+        </div>
         </div>
     </section>
   );
