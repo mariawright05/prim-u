@@ -1,0 +1,8 @@
+.mobile-menu {
+    width: 355px;
+    height: 239px;
+} 
+
+.mobile-menu_hidden {
+    display: none
+}

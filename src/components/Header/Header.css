@@ -61,7 +61,8 @@
   -ms-transition: background 0.3s ease;
   -moz-transition: background 0.3s ease;
   -webkit-transition: background 0.3s ease;
-  background: url('../../images/Logo-hover.png') no-repeat center;
+  background: url('../../images/Logo-hover.png');
+  background-size: contain;
 }
 
 .header__logo-container:hover > .header__text {
@@ -143,13 +144,34 @@
     font-size: 34px;
     line-height: 40px;
     text-align: center;
+    width: 90%;
   }
 
   .header__contents {
     align-items: center;
   }
+  .header__logo {
+    width: 21px;
+    height: 33px;
+    margin-right: 9px;
+    background-size: contain;
+  }
+  .header__nav-link {
+    display: none;
+  }
+  .header__text {
+    font-size: 20px;
+    line-height: 13px;
+  }
 
   .header__menu-wrapper {
-    display: none;
+    padding: 20px 0;
+  }
+  .header__nav-container {
+    background-image: url('../../images/hamburger.svg');
+    height: 14px;
+    width: 30px;
+    padding-left: 0;
+    margin: 10px 0 0;
   }
 }
