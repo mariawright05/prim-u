@@ -35,7 +35,7 @@
   cursor: pointer;
 }
 
-.primlancer__video-title {
+#primlancer__video-title {
   position: absolute;
   top: 62%;
   left: 50%;
@@ -48,4 +48,55 @@
 
 .primlancer__overlay {
   margin: 9px 22px 14px;
+}
+
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (min-width: 375px) and (max-width: 768px) {
+  .primlancer {
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+  
+  #primlancer__section-title {
+    margin-bottom: 40px;
+  }
+  
+  #primlancer__video-title {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    top: 100%;
+    color: #000;
+    width: 100%;
+  }
+
+  #primlancer__button {
+    margin-top: 90px;
+  }
+}
+
+@media screen and (min-width: 881px) and (max-width: 960px) {
+  .primlancer__overlay {
+    margin: 12px 21px 18px;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 880px) {
+  .primlancer__overlay {
+    margin: 19px 11px 24px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 699px) {
+  .primlancer__overlay {
+    margin: 14px 9px 20px;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 599px) {
+  .primlancer__overlay {
+    margin: 11px 6px 15px;
+  }
 }

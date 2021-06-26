@@ -30,7 +30,7 @@ const Providers = () => {
   return (
     <section className="primlancer section-container">
       <div className="primlancer__content-box">
-        <h2 className="section-title">
+        <h2 id="primlancer__section-title" className="section-title">
           <span className="text-accent">primlancers </span>
           at work
         </h2>
@@ -50,10 +50,11 @@ const Providers = () => {
               light={data.primlancers[0].primlancerVideoPoster.url}
             />
             <h3
+              id="primlancer__video-title"
               className={
                 playing
                   ? 'primlancer__video-title_hidden'
-                  : 'card-title_sm primlancer__video-title'
+                  : 'card-title_sm'
               }
             >
               {data.primlancers[0].videoTitle}
@@ -61,7 +62,7 @@ const Providers = () => {
             <div className={playing ? '' : 'overlay_dark primlancer__overlay'} />
           </div>
         </div>
-        <button className="button button_accent">Book a Make Up</button>
+        <button id="primlancer__button" className="button button_accent">Book a Make Up</button>
       </div>
     </section>
   );
