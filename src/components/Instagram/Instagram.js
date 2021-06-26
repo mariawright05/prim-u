@@ -26,12 +26,14 @@ const Instagram = () => {
   return (
     <section className="section-container instagram">
       <div className="section-content-box instagram__content-box">
-        <div
-          className="instagram__image"
-          style={{
-            backgroundImage: `url(${data.instagrams[0].instagramPicture.url})`,
-          }}
-        ></div>
+        <div className="instagram__image-wrapper">
+          <div
+            className="instagram__image"
+            style={{
+              backgroundImage: `url(${data.instagrams[0].instagramPicture.url})`,
+            }}
+          />
+        </div>
         <div className="instagram__text-wrapper">
           <h2 className="section-title instagram__title">
             We post interesting stuff on our
