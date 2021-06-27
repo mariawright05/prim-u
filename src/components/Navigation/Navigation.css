@@ -132,6 +132,11 @@
   -ms-transition: color 0.3s ease;
   -moz-transition: color 0.3s ease;
   -webkit-transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.navigation__nav-link:visited {
+  color: black;
 }
 
 .navigation__nav-link:hover {

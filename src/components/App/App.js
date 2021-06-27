@@ -16,6 +16,7 @@ import Instagram from '../Instagram/Instagram';
 import Footer from '../Footer/Footer';
 import './App.css';
 import NavigationMobile from '../NavigationMobile/NavigationMobile';
+import Loader from '../Loader/Loader';
 
 const MAIN_QUERY = gql`
   {
@@ -50,7 +51,7 @@ function App() {
 
   const { loading, error, data } = useQuery(MAIN_QUERY);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <Loader />;
   if (error) return <p>Error :(</p>;
   return (
     <div className="app">
@@ -61,7 +62,11 @@ function App() {
           logoText={data.mains[0].pageTitle}
         />
       )}
-      <Navigation logoText={data.mains[0].pageTitle} mobile={mobile}  onOpen={handleOpenMenu}/>
+      <Navigation
+        logoText={data.mains[0].pageTitle}
+        mobile={mobile}
+        onOpen={handleOpenMenu}
+      />
 
       <Header
         mobile={mobile}

@@ -16,9 +16,25 @@ const NavigationMobile = (props) => {
           <div className="mobile-menu__logo_text">{props.logoText}</div>
         </div>
         <ul className="mobile-menu__nav-container">
-          <li className="mobile-menu__nav-link">Make a Booking</li>
-          <li className="mobile-menu__nav-link">Work With Us</li>
-          <li className="mobile-menu__nav-link">FAQ</li>
+          <li
+            className="mobile-menu__nav-link"
+            onClick={() => window.open('https://www.prim-u.app/en/list')}
+          >
+            Make a Booking
+          </li>
+          <li
+            className="mobile-menu__nav-link"
+            onClick={() =>
+              window.open(
+                'https://admin.prim-u.app/en/onboard/merchant-signup?marketplace_reference_id=80a44a38349c4c6cbc0ac465d9ce7129&user=Primlancer'
+              )
+            }
+          >
+            Work With Us
+          </li>
+          <a className="mobile-menu__nav-link" href="#section_faq">
+            FAQ
+          </a>
         </ul>
       </div>
     </div>

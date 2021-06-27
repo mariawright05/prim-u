@@ -34,9 +34,25 @@ const Navigation = (props) => {
         </div>
         {!props.mobile ? (
           <ul className="navigation__nav-container">
-            <li className="navigation__nav-link">Make a Booking</li>
-            <li className="navigation__nav-link">Work With Us</li>
-            <li className="navigation__nav-link">FAQ</li>
+            <li
+              className="navigation__nav-link"
+              onClick={() => window.open('https://www.prim-u.app/en/list')}
+            >
+              Make a Booking
+            </li>
+            <li
+              className="navigation__nav-link"
+              onClick={() =>
+                window.open(
+                  'https://admin.prim-u.app/en/onboard/merchant-signup?marketplace_reference_id=80a44a38349c4c6cbc0ac465d9ce7129&user=Primlancer'
+                )
+              }
+            >
+              Work With Us
+            </li>
+            <a className="navigation__nav-link" href="#section_faq">
+              FAQ
+            </a>
           </ul>
         ) : (
           <div

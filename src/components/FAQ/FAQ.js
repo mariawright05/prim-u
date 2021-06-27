@@ -26,7 +26,7 @@ const FAQ_QUERY_2 = gql`
 
 const Faq = (props) => {
   return (
-    <section className="section-container faq">
+    <section className="section-container faq" id="section_faq">
       <div className="section-content-box">
         <h1 className="section-title">
           Frequently asked <span className="text-accent">questions</span>
