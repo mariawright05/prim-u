@@ -45,6 +45,7 @@
   letter-spacing: -0.01em;
   margin-top: 20px;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .mobile-menu__nav-link:visited {

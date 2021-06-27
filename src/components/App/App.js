@@ -47,6 +47,7 @@ function App() {
   function handleOpenMenu() {
     console.log('click');
     setMobileMenuOpen(true);
+    console.log();
   }
 
   const { loading, error, data } = useQuery(MAIN_QUERY);
@@ -57,7 +58,7 @@ function App() {
     <div className="app">
       {mobile && (
         <NavigationMobile
-          open={mobileMenuOpen}
+          onOpen={mobileMenuOpen}
           onClose={handleCloseMenu}
           logoText={data.mains[0].pageTitle}
         />
