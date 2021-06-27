@@ -50,5 +50,7 @@
 @media screen and (min-width: 320px) and (max-width: 768px) {
   .feedbackCard {
     width: 355px;
+    box-sizing: border-box;
+    margin-right: 10px;
   }
 }

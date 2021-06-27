@@ -41,7 +41,7 @@ const Feedback = () => {
         </h1>
         <ul
           className="feedback__list-wrapper"
-          style={{ marginLeft: -360 * position }}
+          style={{ marginLeft: -366 * position }}
         >
           {data.reviews.map((card) => (
             <FeedbackCard key={card.id} card={card} />
