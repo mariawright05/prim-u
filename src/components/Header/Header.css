@@ -112,13 +112,18 @@
   padding-left: 40px;
   text-decoration: none;
 }
-.header__nav-link:visited {
-  color: #ffffff;
-}
 
 .header__nav-link:hover {
   cursor: pointer;
   color: #683d83;
+}
+
+.header__nav-link:active {
+  color: #fff;
+}
+
+.header__nav-link:visited {
+  color: #ffffff;
 }
 
 @media screen and (max-width: 1024px) {
