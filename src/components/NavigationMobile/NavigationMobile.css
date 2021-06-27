@@ -3,7 +3,7 @@
   height: 239px;
   background-color: white;
   z-index: 100;
-  position: absolute;
+  position: fixed;
   top: 0px;
   right: 0px;
   margin: 10px;

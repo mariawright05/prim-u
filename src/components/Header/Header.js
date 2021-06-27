@@ -4,7 +4,6 @@ import './Header.css';
 
 const Header = (props) => {
   const handleHamburgerClick = () => {
-    console.log(props.mobile);
     props.mobile ? props.onOpen() : () => {};
   };
 

@@ -59,7 +59,14 @@ const Navigation = (props) => {
           <div
             className="navigation__hamburger"
             onClick={handleHamburgerClick}
-          ></div>
+            >
+              {/* {props.isOpen &&
+              <NavigationMobile
+                open={props.isOpen}
+                onClose={props.handleCloseMenu}
+                logoText={props.logoText}
+              />} */}
+          </div>
         )}
       </nav>
     </section>
