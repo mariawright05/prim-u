@@ -30,7 +30,7 @@ function App() {
   const [mobile, setMobile] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const breakpoint = 377;
+  const breakpoint = 767;
 
   React.useEffect(() => {
     const handleWindowResize = () => setWidth(window.innerWidth);
@@ -54,15 +54,15 @@ function App() {
   if (error) return <p>Error :(</p>;
   return (
     <div className="app">
-      {mobile ? (
+      {mobile && (
         <NavigationMobile
           open={mobileMenuOpen}
           onClose={handleCloseMenu}
           logoText={data.mains[0].pageTitle}
         />
-      ) : (
-        <Navigation logoText={data.mains[0].pageTitle} />
       )}
+      <Navigation logoText={data.mains[0].pageTitle} mobile={mobile}  onOpen={handleOpenMenu}/>
+
       <Header
         mobile={mobile}
         onOpen={handleOpenMenu}
@@ -79,10 +79,7 @@ function App() {
       <Primlancer />
       <Feedback />
       <Products />
-      <Faq
-        mobile={mobile}
-        width={width}
-      />
+      <Faq mobile={mobile} width={width} />
 
       <Instagram />
       <Footer />

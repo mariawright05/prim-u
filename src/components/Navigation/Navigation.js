@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './Navigation.css';
+import NavigationMobile from '../NavigationMobile/NavigationMobile';
 
 const Navigation = (props) => {
   const [scrollDirection, setScrollDirection] = useState('scroll-down');
   let lastScroll = 660;
+  console.log(props);
 
   const listenScrollEvent = () => {
     const currentScroll = window.pageYOffset;
@@ -20,6 +22,9 @@ const Navigation = (props) => {
     return () => window.removeEventListener('scroll', listenScrollEvent);
   }, []);
 
+  const handleHamburgerClick = () => {
+    props.onOpen();
+  };
   return (
     <section className={`section-container navigation ${scrollDirection}`}>
       <nav className={`navigation__menu-wrapper ${scrollDirection}`}>
@@ -27,11 +32,18 @@ const Navigation = (props) => {
           <div className="navigation__logo" />
           <div className="navigation__logo_text">{props.logoText}</div>
         </div>
-        <ul className="navigation__nav-container">
-          <li className="navigation__nav-link">Make a Booking</li>
-          <li className="navigation__nav-link">Work With Us</li>
-          <li className="navigation__nav-link">FAQ</li>
-        </ul>
+        {!props.mobile ? (
+          <ul className="navigation__nav-container">
+            <li className="navigation__nav-link">Make a Booking</li>
+            <li className="navigation__nav-link">Work With Us</li>
+            <li className="navigation__nav-link">FAQ</li>
+          </ul>
+        ) : (
+          <div
+            className="navigation__hamburger"
+            onClick={handleHamburgerClick}
+          ></div>
+        )}
       </nav>
     </section>
   );

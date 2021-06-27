@@ -18,7 +18,7 @@
   transition: all 0.5s ease;
 }
 
-@media screen and (min-width: 375px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 768px) {
   .feedback {
     padding-top: 60px;
   }
@@ -28,4 +28,3 @@
     margin: 0 auto 40px;
   }
 }
-

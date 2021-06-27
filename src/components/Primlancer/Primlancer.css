@@ -51,19 +51,18 @@
 }
 
 @media screen and (max-width: 1024px) {
-
 }
 
-@media screen and (min-width: 375px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 768px) {
   .primlancer {
     padding-top: 80px;
     padding-bottom: 60px;
   }
-  
+
   #primlancer__section-title {
     margin-bottom: 40px;
   }
-  
+
   #primlancer__video-title {
     margin-top: 40px;
     margin-bottom: 30px;
@@ -95,7 +94,7 @@
   }
 }
 
-@media screen and (min-width: 375px) and (max-width: 599px) {
+@media screen and (min-width: 320px) and (max-width: 599px) {
   .primlancer__overlay {
     margin: 11px 6px 15px;
   }

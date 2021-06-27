@@ -70,7 +70,7 @@
   }
 }
 
-@media screen and (min-width: 375px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 768px) {
   .groupCard__content-box {
     height: auto;
   }

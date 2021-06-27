@@ -27,17 +27,11 @@ const Products = () => {
   const [position, setPosition] = useState(0);
   const prev = () => {
     if (position > 0) setPosition((s) => --s);
+    console.log(position);
   };
   const next = () => {
-    if (position < data.products.length) setPosition((s) => ++s);
-  };
-
-  const move = (delta) => {
-    if (delta > position) {
-      setPosition((s) => ++s);
-    } else {
-      setPosition((s) => --s);
-    }
+    console.log(position);
+    if (position <= data.products.length) setPosition((s) => ++s);
   };
 
   const { loading, error, data } = useQuery(PRODUCTS_QUERY);
@@ -52,7 +46,7 @@ const Products = () => {
         </h2>
         <ul
           className="products__list-wrapper"
-          style={{ marginLeft: -360 * position }}
+          style={{ marginLeft: -324 * position }}
         >
           {data.products.map((card) => (
             <ProductCard key={card.id} card={card} />
@@ -65,7 +59,9 @@ const Products = () => {
           position={position}
         />
         <div className="products__button-wrapper">
-          <button id="products__button" className="button button_accent">Check out beauty products</button>
+          <button id="products__button" className="button button_accent">
+            Check out beauty products
+          </button>
         </div>
       </div>
     </section>
