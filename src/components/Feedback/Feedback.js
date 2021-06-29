@@ -24,7 +24,6 @@ const Feedback = () => {
     if (position > 0) setPosition((s) => --s);
   };
   const next = () => {
-    console.log(`initial position ${position}`);
     if (position < data.reviews.length) setPosition((s) => ++s);
   };
 

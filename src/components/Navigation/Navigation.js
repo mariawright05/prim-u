@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './Navigation.css';
-import NavigationMobile from '../NavigationMobile/NavigationMobile';
 
 const Navigation = (props) => {
   const [scrollDirection, setScrollDirection] = useState('scroll-down');
   let lastScroll = 660;
-  console.log(props);
 
   const listenScrollEvent = () => {
     const currentScroll = window.pageYOffset;
