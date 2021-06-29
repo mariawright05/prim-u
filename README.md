@@ -5,3 +5,6 @@ Prim-U is a beauty and wellness platform that connects professional service prov
 ## Technology
 
 The Prim-U website was developed using React. The content management system used is GraphCMS (<https://graphcms.com/>).
+
+### Project Link
+<https://mariawright05.github.io/prim-u/>
