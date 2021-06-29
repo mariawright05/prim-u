@@ -6,7 +6,7 @@ const FeedbackCard = ({ card }) => {
   const renderStars = (num) => {
     let stars = [];
     for (let i = 0; i < num; i++) {
-      stars.push(<img className="feedbackCard__star" src={star} />);
+      stars.push(<img className="feedbackCard__star" src={star} alt="star icon" />);
     }
     return stars;
   };
