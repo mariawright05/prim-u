@@ -27,10 +27,8 @@ const Products = () => {
   const [position, setPosition] = useState(0);
   const prev = () => {
     if (position > 0) setPosition((s) => --s);
-    console.log(position);
   };
   const next = () => {
-    console.log(position);
     if (position <= data.products.length) setPosition((s) => ++s);
   };
 

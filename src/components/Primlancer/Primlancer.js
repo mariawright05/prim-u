@@ -37,15 +37,13 @@ const Providers = () => {
           <div className="primlancer__video">
             <ReactPlayer
               url={data.primlancers[0].videoUrl}
-              // width="860px"
-              // height="449px"
               width="100%"
               height="100%"
               playing
               onStart={() => {
                 setPlaying(true);
               }}
-              playIcon={<img src={play} className="primlancer__play-icon"></img>}
+              playIcon={<img src={play} className="primlancer__play-icon" alt="play icon"></img>}
               light={data.primlancers[0].primlancerVideoPoster.url}
             />
             <h3

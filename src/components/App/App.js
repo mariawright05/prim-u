@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useQuery } from '@apollo/client';
 import gql from 'graphql-tag';
 import Navigation from '../Navigation/Navigation';
@@ -45,9 +45,7 @@ function App() {
   }
 
   function handleOpenMenu() {
-    console.log('props.onopen');
     setMobileMenuOpen(true);
-    console.log('mobileMenuOpen: ', mobileMenuOpen);
   }
 
   const { loading, error, data } = useQuery(MAIN_QUERY);
